@@ -1,0 +1,50 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.66.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 2361f867507f309f32d8bb9a30f58dafa4dadc7c Build.PL
+SHA1 fbe755be612ce530bcb255aa3459866aac82c3e2 Changes
+SHA1 2b3ccb88f716f614f8af721a1c69dba0bcdbbb32 LICENSE
+SHA1 91cab83bed77fe6465eb3b8eb96d2a9c45c88e1b MANIFEST
+SHA1 7c1c1de63b8cea484f876268d196c785667641c7 META.json
+SHA1 13399ae425ed07b6e39a020b1f309e900443756a META.yml
+SHA1 2995e8a885a7772c8d6adf0229e17fb30b46a8c4 README
+SHA1 4efd622830066cf222e8f2542024a7fed26666a2 inc/Bob.pm
+SHA1 b2daf2d6d3f2158b33d84a79ea725c922f508718 inc/CPANTesting.pm
+SHA1 32d0d60cba78d86b9c2cc6ce3b511c0fbe6e0b91 inc/SubClass.pm
+SHA1 5187a0a83db49f04a61f06ef0f23d880a0b3b8c6 lib/File/MealMaster.pm
+SHA1 38cfc5dfe54179e9413a80060b0193b4775b84d1 lib/File/MealMaster/Result.pm
+SHA1 b3a1adb78f3499a629d591d2638aacb7fdd1f4d9 lib/File/MealMaster/Storage.pm
+SHA1 5b418179c13d5f6c7995c9021ec067a20cab70dc t/01always_pass.t
+SHA1 c2a88ab40c9c38cd8d0cba598a1a75af7465c490 t/02pod.t
+SHA1 d7477d8a429615ca51cfdfc21dfb9e5e6b3aac70 t/03podcoverage.t
+SHA1 6c49c5b022fe4d20fa3931084848e4155a76303d t/04critic.t
+SHA1 53a85a71ca5e6d2be2e9e4f1eb3ddd5e4b19ba54 t/05kwalitee.t
+SHA1 b5fc0653fdf5fa2dfd820c12f33372f9a0b6bdbe t/06yaml.t
+SHA1 29ebe81a7c576c19b77c05db32a10effa7fc18e7 t/07podspelling.t
+SHA1 97ec33012da358d482a53d882842530af5bc5884 t/10test_script.t
+SHA1 00aa2e48a788f7ec7de8365693f0ba278f86c98c t/critic.rc
+SHA1 ad960f01a93f69de5161c454b75c1a89aad897f0 t/recipes.mmf
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.10 (GNU/Linux)
+
+iQEcBAEBAgAGBQJRatG9AAoJEK492j4Im1BpvKsH/3r2+OSdF4LpR4ng+rmsks7c
+GVA6esulLiCjSB+ZfyTSIzXRL2MmKLeeWh9f1m7XahbRMocZXqJo27sivXPl/Q1R
+9YSPyTZNnhbk7YrZWL5mgMtHnYztV7IoiGETyVdG2Uvl74kJ26BR+F1bLYf5zJB2
++8ZrJndEPycMGvH71NkwfMoOeOkqW4KBRmILqw5GKw3nMXbRjz8YjT7v0YMaURz6
+f3TXZG3toAYUfOL3WHF1ljmslpwDJy4Y0u44kKmU/Imy4aU35T5A4NJVbUdcX8Ta
+JNbGYZ9P9j0lTp7U1q652z94EIcQe7Bjz/02BIBX+GuYJxroJlyt679PaA6NMU8=
+=qA0v
+-----END PGP SIGNATURE-----

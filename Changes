@@ -1,0 +1,10 @@
+Revision history for File::MealMaster
+
+0.16.4    2013-04-14 16:56:23
+          Updated POD
+          Added t/critic.rc and fixed case of emacs eval line
+          Extracted code and tests from File::DataClass distribution
+
+0.1.1     2013-04-10 22:51:57
+          Created initial project files
+

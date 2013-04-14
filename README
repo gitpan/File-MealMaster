@@ -1,0 +1,53 @@
+Name
+    File::MealMaster - OO access to the MealMaster recipe files
+
+Version
+    This documents version v0.16.$Rev: 4 $ of File::MealMaster
+
+Synopsis
+       use File::MealMaster;
+
+       my $mealmaster_ref = File::MealMaster->new( $mealmaster_attributes );
+
+Description
+    Extends File::DataClass::Schema. Defines the "recipes" result source
+
+Configuration and Environment
+    Defines these attributes:
+
+    "source_name"
+       Defaults to "recipes". The result source name in the schema
+       definition
+
+Subroutines/Methods
+  make_key
+    Exposes make_key
+
+Diagnostics
+    None
+
+Dependencies
+    File::DataClass::Schema
+    File::MealMaster::Result
+    Moose
+
+Incompatibilities
+    There are no known incompatibilities in this module
+
+Bugs and Limitations
+    There are no known bugs in this module. Please report problems to the
+    address below. Patches are welcome
+
+Author
+    Peter Flanigan, "<pjfl@cpan.org>"
+
+License and Copyright
+    Copyright (c) 2013 Peter Flanigan. All rights reserved
+
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself. See perlartistic
+
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT WARRANTY; without even the implied warranty of MERCHANTABILITY
+    or FITNESS FOR A PARTICULAR PURPOSE
+
