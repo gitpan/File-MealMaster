@@ -1,10 +1,10 @@
-# @(#)$Ident: MealMaster.pm 2013-04-14 15:54 pjf ;
+# @(#)$Ident: MealMaster.pm 2013-04-16 11:23 pjf ;
 
 package File::MealMaster;
 
 use strict;
 use namespace::autoclean;
-use version; our $VERSION = qv( sprintf '0.16.%d', q$Rev: 4 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.16.%d', q$Rev: 5 $ =~ /\d+/gmx );
 
 use File::DataClass::Constants;
 use File::MealMaster::Result;
@@ -50,13 +50,15 @@ __END__
 
 =pod
 
+=encoding utf8
+
 =head1 Name
 
 File::MealMaster - OO access to the MealMaster recipe files
 
 =head1 Version
 
-This documents version v0.16.$Rev: 4 $ of L<File::MealMaster>
+This documents version v0.16.$Rev: 5 $ of L<File::MealMaster>
 
 =head1 Synopsis
 
@@ -97,6 +99,8 @@ None
 =item L<File::DataClass::Schema>
 
 =item L<File::MealMaster::Result>
+
+=item L<File::MealMaster::Storage>
 
 =item L<Moose>
 

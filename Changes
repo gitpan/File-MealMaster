@@ -1,6 +1,7 @@
 Revision history for File::MealMaster
 
-0.16.4    2013-04-14 16:56:23
+0.16.5    2013-04-16 12:24:30
+          Added missing dependency on parent
           Updated POD
           Added t/critic.rc and fixed case of emacs eval line
           Extracted code and tests from File::DataClass distribution

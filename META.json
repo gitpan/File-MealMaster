@@ -49,6 +49,7 @@
             "Template::Stash" : "2.9",
             "namespace::autoclean" : "0.13",
             "namespace::clean" : "0.22",
+            "parent" : "0.224",
             "perl" : "5.01",
             "version" : "0.77"
          }
@@ -57,7 +58,7 @@
    "provides" : {
       "File::MealMaster" : {
          "file" : "lib/File/MealMaster.pm",
-         "version" : "v0.16.4"
+         "version" : "v0.16.5"
       },
       "File::MealMaster::Result" : {
          "file" : "lib/File/MealMaster/Result.pm",
@@ -78,5 +79,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.16.4"
+   "version" : "v0.16.5"
 }
