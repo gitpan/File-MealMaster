@@ -1,28 +1,28 @@
-# @(#)$Ident: Storage.pm 2013-04-10 22:20 pjf ;
+# @(#)$Ident: Storage.pm 2013-06-22 19:31 pjf ;
 
 package File::MealMaster::Storage;
 
-use strict;
 use namespace::clean -except => 'meta';
-use version; our $VERSION = qv( sprintf '0.16.%d', q$Rev: 2 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 6 $ =~ /\d+/gmx );
 
-use English                    qw(-no_match_vars);
+use English                    qw( -no_match_vars );
 use File::DataClass::Constants;
-use File::DataClass::Functions qw(throw);
-use Moose;
+use File::DataClass::Functions qw( throw );
+use File::DataClass::Types     qw( Object Str );
+use Moo;
+use MooX::Augment -class;
 use Template;
 use Template::Stash;
 
-extends qw(File::DataClass::Storage);
+extends q(File::DataClass::Storage);
 
 my $DATA = do { local $RS = undef; <DATA> };
 
-has '+extn'          => default => q(.mmf);
+has '+extn'          => default => '.mmf';
 
-has 'template'       => is => 'ro', isa => 'Object', lazy    => TRUE,
-   builder           => '_build_template';
+has 'template'       => is => 'lazy', isa => Object;
 
-has 'write_template' => is => 'ro', isa => 'Str',    default => $DATA;
+has 'write_template' => is => 'ro',   isa => Str, default => $DATA;
 
 augment '_read_file' => sub {
    my ($self, $rdr) = @_;
@@ -66,7 +66,6 @@ sub make_key {
 }
 
 # Private methods
-
 sub _write_filter {
    my ($self, $wtr, $data) = @_; $data ||= {};
 
@@ -87,7 +86,6 @@ sub _write_filter {
 }
 
 # Private methods
-
 sub _build_template {
    my $self = shift;
    my $args = { INTERPOLATE => FALSE, COMPILE_DIR => $self->schema->tempdir };
@@ -101,7 +99,6 @@ sub _build_template {
 }
 
 # Private subroutines
-
 sub __original_order {
    my ($hash, $lhs, $rhs) = @_;
 
@@ -111,14 +108,10 @@ sub __original_order {
    return $hash->{ $lhs }->{_order_by} <=> $hash->{ $rhs }->{_order_by};
 }
 
-__PACKAGE__->meta->make_immutable;
-
-no Moose;
-
 package # Hide from indexer
    MealMasterMashup;
 
-use parent q(MealMaster);
+use parent 'MealMaster';
 
 sub parse {
    # Copyright (C) 2005, Leon Brocard
@@ -221,7 +214,7 @@ File::MealMaster::Storage - MealMaster food recipe file storage
 
 =head1 Version
 
-0.16.$Revision: 2 $
+0.16.$Rev: 6 $
 
 =head1 Synopsis
 
@@ -229,11 +222,23 @@ File::MealMaster::Storage - MealMaster food recipe file storage
 
 =head1 Configuration and Environment
 
+Defines the following attributes;
+
+=over 3
+
+=item C<extn>
+
+=item C<write_template>
+
+=back
+
 =head1 Subroutines/Methods
 
 =head2 make_key
 
 =head1 Diagnostics
+
+None
 
 =head1 Dependencies
 

@@ -1,20 +1,20 @@
-# @(#)$Ident: Result.pm 2013-04-10 22:21 pjf ;
+# @(#)$Ident: Result.pm 2013-06-22 19:26 pjf ;
 
 package File::MealMaster::Result;
 
-use strict;
 use namespace::clean -except => 'meta';
-use version; our $VERSION = qv( sprintf '0.16.%d', q$Rev: 2 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 6 $ =~ /\d+/gmx );
 
-use Moose;
-use English qw(-no_match_vars);
+use English                 qw( -no_match_vars );
 use File::DataClass::Constants;
+use File::DataClass::Types  qw( Str );
+use Moo;
 
 extends qw(File::DataClass::Result);
 
 my $DATA = do { local $RS = undef; <DATA> };
 
-has '_render_template' => is => 'rw', isa => 'Str', default => $DATA;
+has '_render_template' => is => 'rw', isa => Str, default => $DATA;
 
 sub render {
    my $self          = shift;
@@ -28,8 +28,6 @@ sub render {
    return $buffer;
 }
 
-no Moose;
-
 1;
 
 =pod
@@ -40,7 +38,7 @@ File::MealMaster::Result - MealMaster food recipes custom methods
 
 =head1 Version
 
-0.16.$Revision: 2 $
+0.16.$Rev: 6 $
 
 =head1 Synopsis
 

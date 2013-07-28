@@ -1,22 +1,23 @@
-# @(#)$Ident: MealMaster.pm 2013-04-16 11:23 pjf ;
+# @(#)$Ident: MealMaster.pm 2013-07-28 18:06 pjf ;
 
 package File::MealMaster;
 
-use strict;
-use namespace::autoclean;
-use version; our $VERSION = qv( sprintf '0.16.%d', q$Rev: 5 $ =~ /\d+/gmx );
+use 5.01;
+use namespace::sweep;
+use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 7 $ =~ /\d+/gmx );
 
 use File::DataClass::Constants;
+use File::DataClass::Types  qw( Str );
 use File::MealMaster::Result;
-use Moose;
+use Moo;
 
-extends qw(File::DataClass::Schema);
+extends q(File::DataClass::Schema);
 
 has '+cache_attributes' => default => sub {
    (my $ns = lc __PACKAGE__) =~ s{ :: }{-}gmx; return { namespace => $ns, }
 };
 
-has '+cache_class' => default => q(none);
+has '+cache_class' => default => 'none';
 
 has '+result_source_attributes' => default => sub {
    { recipes          => {
@@ -27,9 +28,9 @@ has '+result_source_attributes' => default => sub {
          result_class => q(File::MealMaster::Result), }, }, }
 };
 
-has '+storage_class' => default => q(+File::MealMaster::Storage);
+has '+storage_class' => default => '+File::MealMaster::Storage';
 
-has 'source_name' => is => 'ro', isa => 'Str', default => q(recipes);
+has 'source_name' => is => 'ro', isa => Str, default => 'recipes';
 
 around 'source' => sub {
    my ($orig, $self) = @_; return $self->$orig( $self->source_name );
@@ -58,7 +59,7 @@ File::MealMaster - OO access to the MealMaster recipe files
 
 =head1 Version
 
-This documents version v0.16.$Rev: 5 $ of L<File::MealMaster>
+This documents version v0.17.$Rev: 7 $ of L<File::MealMaster>
 
 =head1 Synopsis
 
@@ -76,9 +77,25 @@ Defines these attributes:
 
 =over 3
 
+=item C<cache_attributes>
+
+=item C<cache_class>
+
+=item C<result_source_attributes>
+
 =item C<source_name>
 
 Defaults to C<recipes>. The result source name in the schema definition
+
+=back
+
+Modifies these methods;
+
+=over 3
+
+=item C<resultset>
+
+=item C<source>
 
 =back
 
@@ -102,7 +119,7 @@ None
 
 =item L<File::MealMaster::Storage>
 
-=item L<Moose>
+=item L<Moo>
 
 =back
 

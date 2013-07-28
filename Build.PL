@@ -1,36 +1,31 @@
-# @(#)$Ident: Build.PL 2013-04-16 11:19 pjf ;
+# @(#)$Ident: Build.PL 2013-07-28 18:05 pjf ;
 
 use strict;
 use warnings;
 use inc::Bob; # Module::Build subclass
-use version; our $VERSION = qv( sprintf '0.16.%d', q$Rev: 5 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 7 $ =~ /\d+/gmx );
 
 Bob->new( {
    module    => q(File::MealMaster),
    home_page => q(http://www.roxsoft.co.uk),
    requires  => {
-      'perl'                 => 5.010,
-      'namespace::autoclean' => 0.13,
-      'namespace::clean'     => 0.22,
-      'parent'               => 0.224,
-      'version'              => 0.77,
-      'File::DataClass'      => q(0.16.0),
-      'MealMaster'           => 0.28,
-      'Moose'                => 2.0801,
-      'Template'             => 2.18,
-      'Template::Stash'      => 2.9,
-   },
+      'perl'             => 5.01,
+      'namespace::clean' => 0.23,
+      'namespace::sweep' => 0.006,
+      'parent'           => 0.224,
+      'Class::Method::ModifiersX::Augment' => 0.001,
+      'File::DataClass'  => q(0.22.0),
+      'MealMaster'       => 0.28,
+      'Moo'              => 1.002,
+      'Template'         => 2.22, },
    recommends            => {
-      'App::cpanminus'   => 1.6005,
-      'Date::Format'     => 2.24,
-      'Pod::Markdown'    => 1.322,
-      'Module::Metadata' => 1.000011, },
+      'App::cpanminus'   => 1.6005, },
    configure_requires    => {
-      'version'          => 0.77,
-      'Module::Build'    => 0.38, },
+      'version'          => 0.88,
+      'Module::Build'    => 0.4004, },
    build_requires        => {
-      'Exception::Class' => 1.23,
-      'Test::More'       => 0.74,
+      'version'          => 0.88,
+      'Module::Build'    => 0.4004,
       'Text::Diff'       => 1.37, },
 } )->create_build_script; # Goal!
 

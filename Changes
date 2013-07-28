@@ -1,11 +1,15 @@
 Revision history for File::MealMaster
 
+0.17.7    2013-07-28 19:06:30
+          - Bumped File::DataClass dependency
+          - Mooified
+
 0.16.5    2013-04-16 12:24:30
-          Added missing dependency on parent
-          Updated POD
-          Added t/critic.rc and fixed case of emacs eval line
-          Extracted code and tests from File::DataClass distribution
+          - Added missing dependency on parent
+          - Updated POD
+          - Added t/critic.rc and fixed case of emacs eval line
+          - Extracted code and tests from File::DataClass distribution
 
 0.1.1     2013-04-10 22:51:57
-          Created initial project files
+          - Created initial project files
 

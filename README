@@ -2,7 +2,7 @@ Name
     File::MealMaster - OO access to the MealMaster recipe files
 
 Version
-    This documents version v0.16.$Rev: 5 $ of File::MealMaster
+    This documents version v0.17.$Rev: 7 $ of File::MealMaster
 
 Synopsis
        use File::MealMaster;
@@ -15,9 +15,17 @@ Description
 Configuration and Environment
     Defines these attributes:
 
+    "cache_attributes"
+    "cache_class"
+    "result_source_attributes"
     "source_name"
        Defaults to "recipes". The result source name in the schema
        definition
+
+    Modifies these methods;
+
+    "resultset"
+    "source"
 
 Subroutines/Methods
   make_key
@@ -30,7 +38,7 @@ Dependencies
     File::DataClass::Schema
     File::MealMaster::Result
     File::MealMaster::Storage
-    Moose
+    Moo
 
 Incompatibilities
     There are no known incompatibilities in this module
