@@ -55,7 +55,7 @@
    "provides" : {
       "File::MealMaster" : {
          "file" : "lib/File/MealMaster.pm",
-         "version" : "v0.17.8"
+         "version" : "v0.17.9"
       },
       "File::MealMaster::Result" : {
          "file" : "lib/File/MealMaster/Result.pm",
@@ -76,5 +76,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.17.8"
+   "version" : "v0.17.9"
 }

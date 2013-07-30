@@ -1,10 +1,10 @@
-# @(#)$Ident: MealMaster.pm 2013-07-30 10:26 pjf ;
+# @(#)$Ident: MealMaster.pm 2013-07-30 16:47 pjf ;
 
 package File::MealMaster;
 
 use 5.01;
 use namespace::sweep;
-use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 8 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 9 $ =~ /\d+/gmx );
 
 use File::DataClass::Constants;
 use File::DataClass::Types  qw( Str );
@@ -59,7 +59,7 @@ File::MealMaster - OO access to the MealMaster recipe files
 
 =head1 Version
 
-This documents version v0.17.$Rev: 8 $ of L<File::MealMaster>
+This documents version v0.17.$Rev: 9 $ of L<File::MealMaster>
 
 =head1 Synopsis
 
