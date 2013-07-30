@@ -1,6 +1,10 @@
 Revision history for File::MealMaster
 
-0.17.7    2013-07-28 19:06:30
+0.17.8    2013-07-30 11:26:50
+          - Added fremen and frogman to tier gruber
+          - Aborting Bingoes failed see df276fba-f57c-11e2-8c80-50d7c5c10595
+            No choice but to send this smoker to sleep 10 while 1.
+            Chris Williams, put my pause id in your stop list
           - Bumped File::DataClass dependency
           - Mooified
 
