@@ -3,7 +3,7 @@
 package File::MealMaster::Storage;
 
 use namespace::clean -except => 'meta';
-use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 6 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.18.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
 use English                    qw( -no_match_vars );
 use File::DataClass::Constants;
@@ -214,7 +214,7 @@ File::MealMaster::Storage - MealMaster food recipe file storage
 
 =head1 Version
 
-0.16.$Rev: 6 $
+0.16.$Rev: 1 $
 
 =head1 Synopsis
 

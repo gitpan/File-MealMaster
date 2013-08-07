@@ -2,7 +2,7 @@ Name
     File::MealMaster - OO access to the MealMaster recipe files
 
 Version
-    This documents version v0.17.$Rev: 9 $ of File::MealMaster
+    This documents version v0.18.$Rev: 1 $ of File::MealMaster
 
 Synopsis
        use File::MealMaster;

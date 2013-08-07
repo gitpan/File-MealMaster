@@ -1,5 +1,8 @@
 Revision history for File::MealMaster
 
+0.18.1    2013-08-07 11:02:06
+          - Raised minimum Perl version to v5.10.1
+
 0.17.9    2013-07-30 17:47:26
           - New method for CPANTesting min Perl ver
           - Added fremen and frogman to tier gruber

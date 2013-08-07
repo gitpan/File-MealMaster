@@ -1,15 +1,15 @@
-# @(#)$Ident: Build.PL 2013-07-28 18:05 pjf ;
+# @(#)$Ident: Build.PL 2013-08-07 10:00 pjf ;
 
 use strict;
 use warnings;
 use inc::Bob; # Module::Build subclass
-use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 7 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.18.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
 Bob->new( {
-   module    => q(File::MealMaster),
-   home_page => q(http://www.roxsoft.co.uk),
+   module    => 'File::MealMaster',
+   home_page => 'http://www.roxsoft.co.uk',
    requires  => {
-      'perl'             => 5.01,
+      'perl'             => 5.010001,
       'namespace::clean' => 0.23,
       'namespace::sweep' => 0.006,
       'parent'           => 0.224,

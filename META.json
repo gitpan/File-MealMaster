@@ -48,22 +48,22 @@
             "namespace::clean" : "0.23",
             "namespace::sweep" : "0.006",
             "parent" : "0.224",
-            "perl" : "5.01"
+            "perl" : "5.010001"
          }
       }
    },
    "provides" : {
       "File::MealMaster" : {
          "file" : "lib/File/MealMaster.pm",
-         "version" : "v0.17.9"
+         "version" : "v0.18.1"
       },
       "File::MealMaster::Result" : {
          "file" : "lib/File/MealMaster/Result.pm",
-         "version" : "v0.17.6"
+         "version" : "v0.18.1"
       },
       "File::MealMaster::Storage" : {
          "file" : "lib/File/MealMaster/Storage.pm",
-         "version" : "v0.17.6"
+         "version" : "v0.18.1"
       }
    },
    "release_status" : "stable",
@@ -76,5 +76,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.17.9"
+   "version" : "v0.18.1"
 }
